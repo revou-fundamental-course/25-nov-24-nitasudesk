@@ -1,1 +1,63 @@
 /* Ini File CSS */
+
+.main-header {
+    text-align: center;
+}
+
+main {
+    display: flex
+    ;
+        justify-content: space-evenly;
+}
+
+.main-section {
+    width: 40%;
+}
+
+footer {
+    text-align: center;
+}
+
+form {
+    background-color: #709fdc;
+    padding: 18px;
+    border-radius: 4px;
+}
+
+.form-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type=number] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+.form-button-container {
+    margin-top: 32px;
+}
+
+  button {
+    border: 0;
+    padding: 8px;
+    border-radius: 2px;
+  }
+
+  .bg-071739 {
+    background-color: #071739;
+  }
+
+  .bg-b9d5fd {
+    background-color: #b9d5fd;
+  }
+
+  .color-whitesmoke {
+    color:whitesmoke;
+  }
