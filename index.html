@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Menghubungkan CSS ke HTML  -->
     <link rel="stylesheet" href="css\styles.css">
+    <!-- Menambah ikon pensil di input type number -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -26,25 +29,47 @@
 
             <!-- Main Form -->
             <form>
+                <div>
+                    <p>Jenis Kelamin</p>
+                    <label class="label-gender"> 
+                        Pria
+                        <input type="radio" name="gender" value="pria"/>
+                        Wanita
+                        <input type="radio" name="gender" value="wanita"/>
+                    </label>
+                </div>
+
                 <div class="form-item">
                     <label for="berat-badan-input"> 
                         Berat Badan (kg)
                     </label>
-                    <input type="number" id="berat-badan-input" />
+                    <div class="input-container">
+                        <!-- Ikon Pensil -->
+                        <i class="fas fa-pencil-alt icon"></i>
+                        <input type="number" id="berat-badan-input" />
+                    </div>
                 </div>
 
                 <div class="form-item">
                     <label for="usia-input"> 
                         Usia (tahun)
                     </label>
-                    <input type="number" id="usia-input" />
+                    <div class="input-container">
+                        <!-- Ikon Pensil -->
+                        <i class="fas fa-pencil-alt icon"></i>
+                        <input type="number" id="usia-input" />
+                    </div> 
                 </div>
             
                 <div class="form-item">
                     <label for="tinggi-badan-input"> 
                         Tinggi Badan (cm)
                     </label>
-                    <input type="number" id="tinggi-badan-input" />
+                    <div class="input-container">
+                         <!-- Ikon Pensil -->
+                         <i class="fas fa-pencil-alt icon"></i>
+                         <input type="number" id="tinggi-badan-input" />
+                    </div>
                 </div>
 
                 <div class="form-button-container">
@@ -61,7 +86,7 @@
 
                 <p>1. Menghitung berat badan.<br/>2. Menentukan kategori berat badan ideal atau tidak.<br/>3. Mempersiapkan program penurunan berat badan.</p>
                 <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
-                <p>Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M2.</p>
+                <p>Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M<sup>2</sup>.</p>
             </article>
          </section>
 
@@ -71,22 +96,37 @@
                 <header>
                     <h2>Hasil</h2>
                 </header>
+            </div>
 
+            <div class="box">
                 <p>Berat Badan Lebih</p>
 
                 <div id="result-calculation">0</div>
 
                 <p id="info-result">Anda memiliki berat badan</p>
+
+                <button class="bg-071739 color-whitesmoke">Download Hasil BMI</button>
             </div>
 
             <!-- Third Article -->
              <article>
                 <p>Hasil BMI diantara 23 dan 25</p>
                 <p>Anda berada dalam kategori overweight atau berat badan berlebih.<br/>Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga.<br/>Jika BMI Anda dalam kategori ini, maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.</p>
-                
 
+                <button class="bg-071739 color-whitesmoke">Konsultasi Ahli Gizi Via Aplikasi</button>
+                <button class="bg-b9d5fd">Registrasi Online Ahli Gizi</button>
+                
                 <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
              </article>
+
+             <div class="box">
+                <p>Beberapa penyakit yang berasal dari kegemukan</p>
+
+                <p class="pbox">Diabetes <br>Hipertensi <br>Sakit Jantung <br>Osteoarthritis</p> 
+
+                <button class="bg-071739 color-whitesmoke">Konsultasi Dokter Via Aplikasi</button>
+                <button class="bg-b9d5fd">Registrasi Online Sekarang</button>
+            </div>
 
          </section>
 
@@ -96,6 +136,9 @@
     <footer>
         <p>Made by Nitasu@2024</p>
     </footer>
+
+    <!-- Menghubungkan JavaScript ke HTML  -->
+    <script src="./js/script.js"></script>
 
 </body>
 
