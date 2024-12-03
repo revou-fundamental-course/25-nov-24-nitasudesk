@@ -1,7 +1,7 @@
 /* Ini File CSS */
 
 .main-header {
-    text-align: center;
+  text-align: center;
 }
 
 main {
@@ -23,15 +23,53 @@ form {
     padding: 18px;
     border-radius: 4px;
 }
+  
+.label-gender{
+    display: flex;
+    padding-bottom: 12px;
+}
 
 .form-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+/* Styling Ikon di Dalam Input */
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-container input {
+  width: 100%;
+  /* Memberikan ruang untuk ikon */
+  padding-left: 40px;
+  padding-right: 10px;
+  height: 40px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-indent: 10px;
+}
+
+.input-container .icon {
+  position: absolute;
+  /* Posisi pensil di sebelah kiri input */
+  left: 5px;  
+  top: 50%;
+  /* Menyusun vertikal agar ikon di tengah */
+  transform: translateY(-50%);  
+  font-size: 18px;
+  /* Warna ikon */
+  color: #888;  
 }
 
 input[type=number] {
-    width: 40%;
+    width: 90%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -61,3 +99,15 @@ input[type=number] {
   .color-whitesmoke {
     color:whitesmoke;
   }
+
+  .box {
+    background-color: #709fdc;
+    padding: 18px;
+    border-radius: 4px;
+    justify-items: center;
+  }
+
+  .pbox {
+    text-align: center;
+  }
+  
