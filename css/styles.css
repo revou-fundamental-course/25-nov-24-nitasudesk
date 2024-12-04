@@ -1,34 +1,59 @@
 /* Ini File CSS */
 
+/* Posisi Judul Website */
 .main-header {
   text-align: center;
 }
 
+/* Tampilan Main */
 main {
-    display: flex
-    ;
-        justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
 }
 
+/* Ukuran Main Section */
 .main-section {
     width: 40%;
+    text-align: justify;
 }
 
+/* Posisi Footer */
 footer {
     text-align: center;
 }
 
+/* Desain Form */
 form {
     background-color: #709fdc;
     padding: 18px;
     border-radius: 4px;
 }
-  
+
+/* Desain Label (Input Tipe Radio) */
 .label-gender{
     display: flex;
+    flex-direction: row;
     padding-bottom: 12px;
 }
 
+#user-info{
+    margin-top: 20px;
+    justify-items: center;
+}
+
+#user-info p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-bottom: 15px;
+}
+
+#gender-value, #usia-value {
+    font-weight: bold;
+}
+
+/* Desain Form (Input Tipe Number) */
 .form-item {
     display: flex;
     justify-content: space-between;
@@ -45,11 +70,10 @@ form {
 
 .input-container input {
   width: 100%;
-  /* Memberikan ruang untuk ikon */
-  padding-left: 40px;
-  padding-right: 10px;
+  padding-left: 40px; /* Memberikan Ruang Untuk Ikon */
+  padding-right: 10px; /* Memberikan Ruang Untuk Ikon */
   height: 40px;
-  font-size: 12px;
+  font-size: 18px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -58,16 +82,14 @@ form {
 
 .input-container .icon {
   position: absolute;
-  /* Posisi pensil di sebelah kiri input */
-  left: 5px;  
+  left: 5px; /* Posisi pensil di sebelah kiri input */
   top: 50%;
-  /* Menyusun vertikal agar ikon di tengah */
-  transform: translateY(-50%);  
+  transform: translateY(-50%); /* Menyusun vertikal agar ikon di tengah */
   font-size: 18px;
-  /* Warna ikon */
   color: #888;  
 }
 
+/* Tampilan Input */
 input[type=number] {
     width: 90%;
     padding: 12px 20px;
@@ -78,6 +100,7 @@ input[type=number] {
     box-sizing: border-box;
   }
 
+/* Desain Button */
 .form-button-container {
     margin-top: 32px;
 }
@@ -100,14 +123,51 @@ input[type=number] {
     color:whitesmoke;
   }
 
-  .box {
+
+/* Desain Div */
+.box {
     background-color: #709fdc;
     padding: 18px;
     border-radius: 4px;
     justify-items: center;
+    font-size: 20px;
   }
 
-  .pbox {
-    text-align: center;
+/* Memperjelas Hasil BMI Dengan Bold */
+#result-calculation{
+    font-size: 50px;
+    font-family: system-ui;
+    font-weight: bold;
   }
-  
+
+.pbox {
+    text-align: center;
+    font-size: 18px;
+  }
+
+caption{
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.desain-table{
+  width: 100%;
+  border-spacing: 8px;
+  border: 1px solid black;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 480px) {
+  main {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .main-section{
+    width:100%;
+  }
+}

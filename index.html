@@ -19,7 +19,6 @@
 
     <!-- Konten Website -->
     <main>
-
         <!-- Section Form Kalkulator BMI -->
          <section class="main-section">
             <!-- Main Article -->
@@ -33,9 +32,9 @@
                     <p>Jenis Kelamin</p>
                     <label class="label-gender"> 
                         Pria
-                        <input type="radio" name="gender" value="pria"/>
+                        <input type="radio" name="gender" value="Pria"/>
                         Wanita
-                        <input type="radio" name="gender" value="wanita"/>
+                        <input type="radio" name="gender" value="Wanita"/>
                     </label>
                 </div>
 
@@ -46,7 +45,7 @@
                     <div class="input-container">
                         <!-- Ikon Pensil -->
                         <i class="fas fa-pencil-alt icon"></i>
-                        <input type="number" id="berat-badan-input" />
+                        <input type="number" id="berat-badan-input"/>
                     </div>
                 </div>
 
@@ -73,8 +72,8 @@
                 </div>
 
                 <div class="form-button-container">
-                    <button class="bg-071739 color-whitesmoke">Hitung BMI</button>
-                    <button class="bg-b9d5fd">Reset</button>
+                    <button type="button" class="bg-071739 color-whitesmoke" onclick="rumusBMI()">Hitung BMI</button>
+                    <button type="button" class="bg-b9d5fd" onclick="resetForm()">Reset</button>
                 </div>
             </form>
 
@@ -99,47 +98,74 @@
             </div>
 
             <div class="box">
-                <p>Berat Badan Lebih</p>
-
+                <p id="info-result">Status Berat Badan</p>
                 <div id="result-calculation">0</div>
 
-                <p id="info-result">Anda memiliki berat badan</p>
+                <div id="user-info">
+                    <p id="pilih-gender">Jenis Kelamin: <span id="gender-value"></span></p>
+                    <p id="usia-pengunjung">Usia: <span id="usia-value"></span> tahun</p>
+                </div>
 
-                <button class="bg-071739 color-whitesmoke">Download Hasil BMI</button>
+                <button type="button" class="bg-071739 color-whitesmoke" onclick="downloadFile()">Download Hasil BMI</button>
             </div>
 
             <!-- Third Article -->
              <article>
-                <p>Hasil BMI diantara 23 dan 25</p>
-                <p>Anda berada dalam kategori overweight atau berat badan berlebih.<br/>Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga.<br/>Jika BMI Anda dalam kategori ini, maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.</p>
+                <!-- Membuat Tabel Interpretasi BMI -->
+                <table class="desain-table">
+                    <caption>Interpretasi BMI</caption>
+                    <thead>
+                        <tr>
+                            <th>BMI</th>
+                            <th>Status Berat Badan</th>
+                        </tr>
+                    </thead>
 
+                    <tbody>
+                        <tr>
+                            <td>Kurang dari 18.5</td>
+                            <td>Kekurangan Berat Badan</td>
+                        </tr>
+                        <tr>
+                            <td>18.5 - 24.9</td>
+                            <td>Normal (Ideal)</td>
+                        </tr>
+                        <tr>
+                            <td>25.0 - 29.9</td>
+                            <td>Kelebihan Berat Badan</td>
+                        </tr>
+                        <tr>
+                            <td>30.0 atau lebih</td>
+                            <td>Kegemukan (Obesitas)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Hasil BMI bisa dilihat pada tabel.</p>
+                <p>Misalnya hasil BMI Anda menunjukkan angka 33.3 artinya Anda berada dalam kategori obesitas.<br/>Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga.<br/>Jika BMI Anda dalam kategori ini, maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.</p>
+                
                 <button class="bg-071739 color-whitesmoke">Konsultasi Ahli Gizi Via Aplikasi</button>
                 <button class="bg-b9d5fd">Registrasi Online Ahli Gizi</button>
-                
+
                 <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
              </article>
 
              <div class="box">
                 <p>Beberapa penyakit yang berasal dari kegemukan</p>
-
                 <p class="pbox">Diabetes <br>Hipertensi <br>Sakit Jantung <br>Osteoarthritis</p> 
-
                 <button class="bg-071739 color-whitesmoke">Konsultasi Dokter Via Aplikasi</button>
                 <button class="bg-b9d5fd">Registrasi Online Sekarang</button>
             </div>
-
          </section>
-
     </main>
 
     <!-- Footer Website -->
     <footer>
-        <p>Made by Nitasu@2024</p>
+        <p>Made by Nitasu<sup>@</sup>2024</p>
     </footer>
 
     <!-- Menghubungkan JavaScript ke HTML  -->
     <script src="./js/script.js"></script>
-
 </body>
 
 </html>
